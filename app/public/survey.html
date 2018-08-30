@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Lets find a friend!!!</h1>
+    <hr>
+    <h2>Answer the questions below so you find your future best friends</h2>
+    <hr>
+
+    <h3>Share about yourself </h3>
+    <h5>Name</h5>
+    <input type="text" id="name" class="form" required>
+
+    <h5>Link to your picture</h5>
+    <input type="text" id="image" class="form" required>
+
+    <hr>
+
+    <h3>Question 1</h3>
+    <h5>You are ambitious and want to be rich.</h5>
+    <select class="selectOptions" id="q1">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+    <h3>Question 2</h3>
+    <h5>You are a risk taker with an entreprenurial spirit.</h5>
+    <select class="selectOptions" id="q2">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+
+    <h3>Question 3</h3>
+    <h5>You like to workout every day.</h5>
+    <select class="selectOptions" id="q3">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+
+    <h3>Question 4</h3>
+    <h5>You support charitable causes.</h5>
+    <select class="selectOptions" id="q4">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+
+    <h3>Question 5</h3>
+    <h5>you like to read a book per week.</h5>
+    <select class="selectOptions" id="q5">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+
+    <h3>Question 6</h3>
+    <h5>you like beach more than mountain.</h5>
+    <select class="selectOptions" id="q6">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+
+    <h3>Question 7</h3>
+    <h5>You like to travel once a month.</h5>
+    <select class="selectOptions" id="q7">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+    <h3>Question 8</h3>
+    <h5>You like to code and create apps.</h5>
+    <select class="selectOptions" id="q8">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+    <h3>Question 9</h3>
+    <h5>You like to wake up early in the morning.</h5>
+    <select class="selectOptions" id="q9">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+    <h3>Question 10</h3>
+    <h5>You like dogs more than cats.</h5>
+    <select class="selectOptions" id="q10">
+      <option value=""></option>
+      <option value="1">1 (so not me)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very me)</option>
+    </select>
+
+    <br>
+    <br>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary" id="submit">
+      Submit</button>
+
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">Friends List API</a> | <a href="https://rastarastegar.github.io/FriendFinder/">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- toggle -->
+  <div id="results-toggle" class="toggle fade" role="dialog">
+    <div class="toggle-dialog">
+
+      <!-- toggle content-->
+      <div class="toggle-content">
+        <div class="toggle-header">
+          <button class="close" data-dismiss="toggle">&times;</button>
+          <h2 class="toggle-title">Your Best Match</h2>
+        </div>
+        <div class="toggle-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+        </div>
+        <div class="toggle-footer">
+          <button class="btn btn-default" data-dismiss="toggle">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    // Inputs
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+
+      // validation researched on internet 
+      function inputValidation() {
+
+        let input = true;
+
+        $(".form").each(function () {
+
+          if ($(this).val() === "") {
+
+            input = false;
+          }
+        });
+
+        $(".selectOptions").each(function () {
+
+          if ($(this).val() === "") {
+
+            input = false;
+          }
+        });
+
+        return input;
+      }
+
+      // If form is validated 
+      if (inputValidation() === true) {
+        // Capture all the users inputs 
+        let validatedInputs = {
+          name: $("#name").val(),
+          image: $("#image").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        // post the data to the friends API as objects.
+        $.post("/api/friends", validatedInputs, function (data) {
+
+          // Grab the result from the AJAX post so that the best match's name and image are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.image);
+
+          // Show the toggle with the best match
+          $("#results-toggle").toggle("toggle");
+
+        });
+      } else {
+        alert("Please fill out all fields and submit again.");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
